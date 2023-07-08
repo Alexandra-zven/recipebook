@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header_btn>button{
+    margin: 1px;
+}
+.header_greeting{
+    border: 1px solid black;
+}
