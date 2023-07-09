@@ -3,7 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import SignUp from "../../main/SignUp";
+import SignUp from "../Header/SignUp";
 
 interface Props {
     handleCloseSignUp: ()=> void
