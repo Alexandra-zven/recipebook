@@ -1,10 +1,11 @@
 
 import {createSlice} from "@reduxjs/toolkit";
 import GetRecipeByIngredients from "../../api/api";
-const initialState = {
+import {recipeState} from "../state.types";
+const initialState:recipeState  = {
     recipeName: '',
     loading: false,
-    listOfRecipes: ''
+    listOfRecipes: []
 }
 
  const recipeSlice = createSlice({
@@ -15,7 +16,7 @@ const initialState = {
         builder.addCase(GetRecipeByIngredients.pending, (state) => {state.loading = true});
         builder.addCase(GetRecipeByIngredients.fulfilled, (state, action) => {
             state.loading = false;
-            state.listOfRecipes = action.payload});
+            state.listOfRecipes = action.payload.hits});
         builder.addCase(GetRecipeByIngredients.rejected, (state) => {
             state.loading = false
         })
