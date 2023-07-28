@@ -1,6 +1,7 @@
 .header{
     display: flex;
     justify-content: space-between;
+    font-family: cursive;
 }
 
 .header_btn{
@@ -9,8 +10,9 @@
 }
 
 .header_btn>button{
-    margin: 1px;
+    margin: 2px;
 }
 .header_greeting{
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
 }

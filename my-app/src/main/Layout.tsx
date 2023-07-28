@@ -1,18 +1,17 @@
 import React from 'react';
-import SearchRecipes from "./SearchRecipes";
-import Details from "./Details";
+import SearchRecipes from "../components/SearchRecipes";
+import Details from "../components/Details";
 import Grid from "@mui/material/Grid";
-import ChoosenIngredients from "./ChoosenIngredients";
+import './layout.css';
 
 const Layout = () => {
     return (
-        <div>
-            <Grid container>
+        <div className={'layout'}>
+            <Grid container className={'layout'}>
                 <Grid item xs={4}>
                     <SearchRecipes/>
-                    <ChoosenIngredients/>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={8} className={'grid-details'}>
                     <Details/>
                 </Grid>
             </Grid>
