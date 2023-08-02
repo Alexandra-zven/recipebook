@@ -36,7 +36,9 @@ const GetRecipeByIngredients = createAsyncThunk(
                 app_key: '4c955368211b3c8e229d2defc8f91be8',
                 q: ingredient.join(',')
             }
-        }).then(res => res.data)
+        }).then(res => {
+            console.log(res.data)
+            return res.data})
     }
 )
 

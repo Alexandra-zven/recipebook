@@ -14,9 +14,9 @@ const Details = () => {
     store.subscribe(() => setRecipeArr(store.getState().recipeReducer.listOfRecipes))
     return (
         isRecipeChosen ? <OneRecipe recipe={chosenRecipe()} status={setIsRecipeChosen}/> :
-            <Grid container>
+            <Grid container spacing={1}>
                 {recipeArr.map(e=>{
-                    return (<Grid item xs={4}>
+                    return (<Grid item xs={4} >
                         <RecipeCards key={e.recipe.label} recipe={e.recipe} ingredients={e.recipe.ingredients} status={setIsRecipeChosen}/>
                     </Grid>
                     )
